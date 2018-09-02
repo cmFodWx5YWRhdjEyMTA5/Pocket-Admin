@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ais.pocketadmin">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Welcome.Splash"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Teachers.TeacherAssistant.Profile_Activity"
+            android:parentActivityName=".Teachers.TeacherMainActivity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.Student_Registartion"
+            android:parentActivityName=".Teachers.TeacherAssistant.Profile_Activity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.NoteCreate"
+            android:parentActivityName=".Teachers.TeacherAssistant.NoteActivity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.AttendanceActivity"
+            android:parentActivityName=".Teachers.TeacherMainActivity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.Result_activity"
+            android:parentActivityName=".Teachers.TeacherAssistant.Cgpa_Activity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.Cgpa_Activity"
+            android:parentActivityName=".Teachers.TeacherMainActivity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.NoteActivity"
+            android:parentActivityName=".Teachers.TeacherMainActivity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.Scheduler"
+            android:parentActivityName=".Teachers.TeacherMainActivity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.Make_Schedule"
+            android:parentActivityName=".Teachers.TeacherAssistant.Scheduler" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".Teachers.TeacherMainActivity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.About"
+            android:parentActivityName=".Teachers.TeacherMainActivity" />
+        <activity
+            android:name=".Teachers.TeacherAssistant.Edit_Student"
+            android:parentActivityName=".Teachers.TeacherMainActivity" />
+        <activity
+            android:name=".Welcome.Logins.LoginActivityMain"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Welcome.Logins.LoginTypes.LoginActivityTeahcers"
+            android:label="@string/title_activity_login_teahcers" />
+        <activity
+            android:name=".Welcome.Logins.LoginTypes.LoginActivityAdmin"
+            android:label="@string/title_activity_login_admin" />
+        <activity android:name=".Teachers.TeacherMainActivity" />
+        <activity android:name=".Teachers.TeacherAssistant.Marks"/>
+    </application>
+
+</manifest>
